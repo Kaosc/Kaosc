@@ -1,16 +1,12 @@
-### Hi there 👋
+### Products
 
-<!--
-**Kaosc/Kaosc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<div>
+  <a href="https://play.google.com/store/apps/details?id=com.Kaosc.quickcopy">
+    <img align="left" width="64" height="64" src="./assets/quickcopy.png">
+  <a>
+</div>
+<div>
+  <a href="https://play.google.com/store/apps/details?id=com.Kaosc.SrcKitab">
+    <img align="left" width="64" height="64" src="./assets/surucukitabi.png">
+  <a>
+</div>
