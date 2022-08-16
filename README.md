@@ -1,12 +1,27 @@
 ### Products
 
+<table border-style="none">
+<tr>
+</tr>
+<td style="border-style: none;">
 <div>
   <a href="https://play.google.com/store/apps/details?id=com.Kaosc.quickcopy">
-    <img align="left" width="64" height="64" src="./assets/quickcopy.png">
+    <kbd>
+      <img width="64" height="64" src="./assets/quickcopy.png">
+    </kbd>
   <a>
 </div>
+</td>
+<td style="border-style: none;">
 <div>
   <a href="https://play.google.com/store/apps/details?id=com.Kaosc.SrcKitab">
-    <img align="left" width="64" height="64" src="./assets/surucukitabi.png">
-  <a>
+    <kbd>
+      <img width="64" height="64" src="./assets/surucukitabi.png">
+    </kbd>
+    <a>
 </div>
+</td>
+</table>
+
+
+
