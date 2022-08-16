@@ -1,9 +1,7 @@
 ### Products
 
-<table border-style="none">
-<tr>
-</tr>
-<td style="border-style: none;">
+<table>
+<td>
 <div>
   <a href="https://play.google.com/store/apps/details?id=com.Kaosc.quickcopy">
     <kbd>
