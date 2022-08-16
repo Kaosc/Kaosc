@@ -1,6 +1,8 @@
 ### Products
 
 <table>
+<tr>
+</tr>
 <td>
 <div>
   <a href="https://play.google.com/store/apps/details?id=com.Kaosc.quickcopy">
@@ -10,7 +12,7 @@
   <a>
 </div>
 </td>
-<td style="border-style: none;">
+<td>
 <div>
   <a href="https://play.google.com/store/apps/details?id=com.Kaosc.SrcKitab">
     <kbd>
@@ -20,6 +22,4 @@
 </div>
 </td>
 </table>
-
-
 
