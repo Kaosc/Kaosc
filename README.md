@@ -21,5 +21,14 @@
     <a>
 </div>
 </td>
+  <td>
+<div>
+  <a href="https://top.gg/bot/1052869011366477844">
+    <kbd>
+      <img width="64" height="64" src="https://raw.githubusercontent.com/Kaosc/discord-cat-bot/master/assets/cat_square.png">
+    </kbd>
+    <a>
+</div>
+</td>
 </table>
 
