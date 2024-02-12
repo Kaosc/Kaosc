@@ -1,24 +1,25 @@
 import { NextResponse } from "next/server"
 
+const getCurrentDate = () => {
+	const now = new Date()
+	const year = now.getUTCFullYear()
+	const month = String(now.getUTCMonth() + 1).padStart(2, "0")
+	const day = String(now.getUTCDate()).padStart(2, "0")
+	return `${year}-${month}-${day}`
+}
+
+const getCurrentTime = () => {
+	const now = new Date()
+	const hours = String(now.getUTCHours()).padStart(2, "0")
+	const minutes = String(now.getUTCMinutes()).padStart(2, "0")
+	const seconds = String(now.getUTCSeconds()).padStart(2, "0")
+	return `${hours}:${minutes}:${seconds}`
+}
+
 export async function GET() {
-	const getCurrentDate = () => {
-		const now = new Date()
-		const year = now.getUTCFullYear()
-		const month = String(now.getUTCMonth() + 1).padStart(2, "0")
-		const day = String(now.getUTCDate()).padStart(2, "0")
-		return `${year}-${month}-${day}`
-	}
-
-	const getCurrentTime = () => {
-		const now = new Date()
-		const hours = String(now.getUTCHours()).padStart(2, "0")
-		const minutes = String(now.getUTCMinutes()).padStart(2, "0")
-		const seconds = String(now.getUTCSeconds()).padStart(2, "0")
-		return `${hours}:${minutes}:${seconds}`
-	}
-
 	const currentDate = getCurrentDate()
 	const currentTime = getCurrentTime()
+
 	const baseUrl = `${process.env.FIREBASE_LEADERBOARD_INFO_URL}?auth=${process.env.FIREBASE_TOKEN}`
 	const payload = {
 		leaderboard_date: currentDate,
