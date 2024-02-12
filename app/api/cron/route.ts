@@ -13,7 +13,7 @@ export async function GET() {
 	const baseUrl = `${process.env.FIREBASE_LEADERBOARD_INFO_URL}?auth=${process.env.FIREBASE_TOKEN}`
 
 	const payload = {
-		id: 1,
+		id: 2,
 		leaderboard_date: currentDate,
 	}
 
