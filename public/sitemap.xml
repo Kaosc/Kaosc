@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://kaosc.vercel.app/</loc>
+  <lastmod>2023-10-11</lastmod>
+  <priority>1.00</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/#products</loc>
+  <lastmod>2023-08-12</lastmod>
+  <priority>0.9</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/driverbook</loc>
+  <lastmod>2023-08-12</lastmod>
+  <priority>0.9</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/quickcopy</loc>
+  <lastmod>2023-08-12</lastmod>
+  <priority>0.9</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/contact</loc>
+  <lastmod>2023-08-12</lastmod>
+  <priority>0.9</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/bookmarkhub</loc>
+  <lastmod>2023-10-11</lastmod>
+  <priority>0.8</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/kavaklakerda</loc>
+  <lastmod>2023-10-11</lastmod>
+  <priority>0.8</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/about</loc>
+  <lastmod>2023-10-11</lastmod>
+  <priority>0.8</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/sunsetsunrise</loc>
+  <lastmod>2023-10-11</lastmod>
+  <priority>0.8</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/catbot</loc>
+  <lastmod>2023-10-11</lastmod>
+  <priority>0.8</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/hyletheme</loc>
+  <lastmod>2023-10-11</lastmod>
+  <priority>0.7</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/driverbook/privacy</loc>
+  <lastmod>2023-08-12</lastmod>
+  <priority>0.7</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/quickcopy/about</loc>
+  <lastmod>2023-08-12</lastmod>
+  <priority>0.7</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/quickcopy/privacy</loc>
+  <lastmod>2023-08-12</lastmod>
+  <priority>0.7</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/driverbook/privacy</loc>
+  <lastmod>2023-10-11</lastmod>
+  <priority>0.6</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/quickcopy/terms</loc>
+  <lastmod>2023-15-12</lastmod>
+  <priority>0.7</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/driverbook/terms</loc>
+  <lastmod>2023-15-12</lastmod>
+  <priority>0.6</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://kaosc.vercel.app/bookmarkhub/privacy</loc>
+  <lastmod>2023-10-11</lastmod>
+  <priority>0.5</priority>
+  <changefreq>yearly</changefreq>
+</url>
+</urlset>
