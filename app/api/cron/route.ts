@@ -23,9 +23,9 @@ export async function GET() {
 			},
 			body: JSON.stringify(payload),
 		})
+		return Response.json({ stauts: "200" })
 	} catch (error) {
 		console.error("Error in fetch:", error)
+		return Response.json({ stauts: "400", error: error })
 	}
-
-	return Response.json("DONE")
 }
