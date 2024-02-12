@@ -9,12 +9,20 @@ export async function GET() {
 		return `${year}-${month}-${day}`
 	}
 
-	const currentDate = getCurrentDate()
-	const baseUrl = `${process.env.FIREBASE_LEADERBOARD_INFO_URL}?auth=${process.env.FIREBASE_TOKEN}`
+	const getCurrentTime = () => {
+		const now = new Date()
+		const hours = String(now.getUTCHours()).padStart(2, "0")
+		const minutes = String(now.getUTCMinutes()).padStart(2, "0")
+		const seconds = String(now.getUTCSeconds()).padStart(2, "0")
+		return `${hours}:${minutes}:${seconds}`
+	}
 
+	const currentDate = getCurrentDate()
+	const currentTime = getCurrentTime()
+	const baseUrl = `${process.env.FIREBASE_LEADERBOARD_INFO_URL}?auth=${process.env.FIREBASE_TOKEN}`
 	const payload = {
-		id: 2,
 		leaderboard_date: currentDate,
+		learderboard_time: currentTime,
 	}
 
 	try {
@@ -27,7 +35,6 @@ export async function GET() {
 		})
 		return NextResponse.json(payload)
 	} catch (error) {
-		console.error("Error in fetch:", error)
 		return NextResponse.json({ error })
 	}
 }
