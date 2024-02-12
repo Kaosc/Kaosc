@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server"
+
 export async function GET() {
 	const getCurrentDate = () => {
 		const now = new Date()
@@ -23,9 +25,9 @@ export async function GET() {
 			},
 			body: JSON.stringify(payload),
 		})
-		return Response.json({ stauts: "200" })
+		return NextResponse.json(payload)
 	} catch (error) {
 		console.error("Error in fetch:", error)
-		return Response.json({ stauts: "400", error: error })
+		return NextResponse.json({ error })
 	}
 }
