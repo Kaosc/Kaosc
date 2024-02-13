@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
 	const currentDate = getCurrentDate()
 	const currentTime = getCurrentTime()
 
-	const baseUrl = `${process.env.FIREBASE_DB_BASE}/leaderboardInfo.json?auth=${process.env.FIREBASE_TOKEN}`
+	const baseUrl = `${process.env.FIREBASE_DB_BASE}?auth=${process.env.FIREBASE_TOKEN}`
 	const payload = {
 		leaderboard_date: currentDate,
 		learderboard_time: currentTime,
