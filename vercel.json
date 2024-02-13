@@ -1,8 +1,12 @@
 {
    "crons": [
       {
-         "path": "/api/cron",
+         "path": "/api/cron/lbdelete",
          "schedule": "0 1 * * 4"
+      },
+      {
+         "path": "/api/cron/lbupdate",
+         "schedule": "0 9 * * 4"
       }
    ]
 }
