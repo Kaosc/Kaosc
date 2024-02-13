@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server"
 
-export async function PUT() {
+export const dynamic = "force-dynamic"
+
+export async function GET() {
 	const getCurrentDate = () => {
 		const now = new Date()
 		const year = now.getUTCFullYear()
