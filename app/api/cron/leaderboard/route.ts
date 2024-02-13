@@ -13,7 +13,6 @@ export async function GET(request: NextRequest) {
 
 	const dataBaseUrl = (path?: "userlist" | "info" | "winners") => {
 		const ref = "/" + path || ""
-		console.log(ref)
 		const baseurl = `${process.env.FIREBASE_DB_BASE}/leaderboard${ref}.json?auth=${process.env.FIREBASE_TOKEN}&?print=pretty`
 		return baseurl
 	}
