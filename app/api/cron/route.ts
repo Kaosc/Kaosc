@@ -34,8 +34,9 @@ export async function PUT() {
 			},
 			body: JSON.stringify(payload),
 		})
-		return NextResponse.json(payload)
 	} catch (error) {
 		return NextResponse.json({ error })
 	}
+
+	return NextResponse.json(payload)
 }
