@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 
-export async function GET() {
+export async function PUT() {
 	const getCurrentDate = () => {
 		const now = new Date()
 		const year = now.getUTCFullYear()
@@ -11,9 +11,9 @@ export async function GET() {
 
 	const getCurrentTime = () => {
 		const now = new Date()
-		const hours = String(now.getUTCHours()).padStart(2, "0")
-		const minutes = String(now.getUTCMinutes()).padStart(2, "0")
-		const seconds = String(now.getUTCSeconds()).padStart(2, "0")
+		const hours = String(now.getHours()).padStart(2, "0")
+		const minutes = String(now.getMinutes()).padStart(2, "0")
+		const seconds = String(now.getSeconds()).padStart(2, "0")
 		return `${hours}:${minutes}:${seconds}`
 	}
 
