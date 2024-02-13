@@ -18,8 +18,8 @@ export async function GET(request: NextRequest) {
 		return baseurl
 	}
 
-	await createFakeLeaderBoard(dataBaseUrl("userlist"))
-	return NextResponse.json(`>>> Fake leaderboard created`)
+	// await createFakeLeaderBoard(dataBaseUrl("userlist"))
+	// return NextResponse.json(`>>> Fake leaderboard created`)
 
 	// SAVE WINNERS
 	try {
