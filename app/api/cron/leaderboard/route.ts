@@ -11,25 +11,28 @@ export async function GET(request: NextRequest) {
 		}
 	}
 
-	const LB_INFO_URL = `${process.env.FIREBASE_DB_BASE}/leaderboardInfo.json?auth=${process.env.FIREBASE_TOKEN}`
-	const LB_WINNERS_URL = `${process.env.FIREBASE_DB_BASE}/leaderboardWinners.json?auth=${process.env.FIREBASE_TOKEN}`
-	const LB_URL = `${process.env.FIREBASE_DB_BASE}/leaderboard.json?auth=${process.env.FIREBASE_TOKEN}&?print=pretty`
+	const dataBaseUrl = (path?: "userlist" | "info" | "winners") => {
+		const ref = "/" + path || ""
+		console.log(ref)
+		const baseurl = `${process.env.FIREBASE_DB_BASE}/leaderboard${ref}.json?auth=${process.env.FIREBASE_TOKEN}&?print=pretty`
+		return baseurl
+	}
 
-	// await createFakeLeaderBoard(LB_URL)
-	// return
+	await createFakeLeaderBoard(dataBaseUrl("userlist"))
+	return NextResponse.json(`>>> Fake leaderboard created`)
 
 	// SAVE WINNERS
 	try {
 		// Fetch existing leaderboard data
-		const existingData = await fetch(LB_WINNERS_URL, { cache: "no-store" })
-		let currentWinners = await existingData.json()
+		const lbWinners = await fetch(dataBaseUrl("winners"), { cache: "no-store" })
+		const currentWinners = await lbWinners.json()
 
 		// Fetch new winners of the week
-		const lb = await fetch(LB_URL)
+		const lb = await fetch(dataBaseUrl("userlist"))
 		let newWinners = (await lb.json())?.slice(0, 3) || "NO_WINNER_FOUND"
 
 		// Fetch leaderboard_date date
-		const lbInfo = await fetch(LB_INFO_URL, { cache: "no-store" })
+		const lbInfo = await fetch(dataBaseUrl("info"), { cache: "no-store" })
 		const leaderboard_date = (await lbInfo.json()).leaderboard_date
 
 		// Update existing data with new winners
@@ -40,7 +43,7 @@ export async function GET(request: NextRequest) {
 
 		// Save the updated data
 		try {
-			await fetch(LB_WINNERS_URL, {
+			await fetch(dataBaseUrl("winners"), {
 				method: "PUT",
 				cache: "no-store",
 				headers: {
@@ -57,7 +60,7 @@ export async function GET(request: NextRequest) {
 
 	// DELETE LEADERBOARD
 	try {
-		await fetch(LB_URL, {
+		await fetch(dataBaseUrl("userlist"), {
 			method: "DELETE",
 		})
 	} catch (e) {
@@ -71,7 +74,7 @@ export async function GET(request: NextRequest) {
 			learderboard_time: getCurrentTime(),
 		}
 
-		await fetch(LB_INFO_URL, {
+		await fetch(dataBaseUrl("info"), {
 			method: "PUT",
 			cache: "no-store",
 			headers: {
@@ -103,22 +106,37 @@ const getCurrentTime = () => {
 }
 
 const createFakeLeaderBoard = async (url: string) => {
-	try {
-		await fetch(url, {
-			method: "PUT",
-			cache: "no-store",
-			headers: {
-				"Content-Type": "application/json",
+	await fetch(url, {
+		method: "PUT",
+		cache: "no-store",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify([
+			{
+				id: "1",
+				username: "Kaosc",
+				leaderboard_date: 0,
+				score: 0,
 			},
-			body: JSON.stringify([
-				{ id: "1", leaderboard_date: 0, username: "Kaosc" },
-				{ id: "2", leaderboard_date: 0, username: "Hyle" },
-				{ id: "3", leaderboard_date: 0, username: "Alex" },
-				{ id: "4", leaderboard_date: 0, username: "Mercer" },
-			]),
-		})
-		return NextResponse.json(`>>> Fake leaderboard created`)
-	} catch (e) {
-		return NextResponse.json(`>>> Error on creating fake leaderboard: ${e}`)
-	}
+			{
+				id: "2",
+				username: "Hyle",
+				leaderboard_date: 0,
+				score: 0,
+			},
+			{
+				id: "3",
+				username: "Alex",
+				leaderboard_date: 0,
+				score: 0,
+			},
+			{
+				id: "4",
+				username: "Mercer",
+				leaderboard_date: 0,
+				score: 0,
+			},
+		]),
+	})
 }
