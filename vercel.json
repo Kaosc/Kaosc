@@ -1,16 +1,8 @@
 {
    "crons": [
       {
-         "path": "/api/cron/leaderboard/save-winners",
-         "schedule": "0 9 * * 4"
-      },
-      {
-         "path": "/api/cron/leaderboard/clean-board",
-         "schedule": "0 1 * * 4"
-      },
-      {
-         "path": "/api/cron/leaderboard/update-board",
-         "schedule": "0 9 * * 4"
+         "path": "/api/cron/leaderboard",
+         "schedule": "5 0 * * 1"
       }
    ]
 }
