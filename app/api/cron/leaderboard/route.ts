@@ -112,35 +112,125 @@ const createFakeLeaderBoard = async (url: string) => {
 			"Content-Type": "application/json",
 		},
 		body: JSON.stringify({
-			"123": {
+			"1": {
+				id: "1",
+				leaderboard_date: 0,
+				score: 456,
+				username: "Alpha",
+			},
+			"2": {
+				id: "2",
+				leaderboard_date: 0,
+				score: 789,
+				username: "Beta",
+			},
+			"3": {
+				id: "3",
+				leaderboard_date: 0,
+				score: 654,
+				username: "Gamma",
+			},
+			"4": {
 				id: "4",
 				leaderboard_date: 0,
-				score: 0,
+				score: 323,
 				username: "Mercer",
 			},
-			"321": {
-				id: "4",
+			"5": {
+				id: "5",
 				leaderboard_date: 0,
-				score: 0,
-				username: "Hyle",
+				score: 123,
+				username: "Vortex",
 			},
-			"111": {
-				id: "4",
+			"6": {
+				id: "6",
 				leaderboard_date: 0,
-				score: 0,
-				username: "Kiri",
+				score: 234,
+				username: "Luna",
 			},
-			"222": {
-				id: "4",
+			"7": {
+				id: "7",
 				leaderboard_date: 0,
-				score: 0,
-				username: "Kaosc",
+				score: 2352,
+				username: "Blaze",
 			},
-			"333": {
-				id: "4",
+			"8": {
+				id: "8",
+				leaderboard_date: 0,
+				score: 2342,
+				username: "Phoenix",
+			},
+			"9": {
+				id: "9",
 				leaderboard_date: 0,
 				score: 0,
-				username: "Alex",
+				username: "Rogue",
+			},
+			"10": {
+				id: "10",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Specter",
+			},
+			"11": {
+				id: "11",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Titan",
+			},
+			"12": {
+				id: "12",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Fury",
+			},
+			"13": {
+				id: "13",
+				leaderboard_date: 0,
+				score: 565,
+				username: "Astra",
+			},
+			"14": {
+				id: "14",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Nova",
+			},
+			"15": {
+				id: "15",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Orion",
+			},
+			"16": {
+				id: "16",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Nebula",
+			},
+			"17": {
+				id: "17",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Galaxy",
+			},
+			"18": {
+				id: "18",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Cosmo",
+			},
+			"19": {
+				id: "19",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Zephyr",
+			},
+			"20": {
+				id: "20",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Quasar",
 			},
 		}),
 	})
