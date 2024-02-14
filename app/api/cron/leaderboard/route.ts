@@ -11,9 +11,8 @@ export async function GET(request: NextRequest) {
 		}
 	}
 
-	const dataBaseUrl = (path?: "userlist" | "info" | "winners") => {
-		const ref = "/" + path || ""
-		const baseurl = `${process.env.FIREBASE_DB_BASE}/leaderboard${ref}.json?auth=${process.env.FIREBASE_TOKEN}&?print=pretty`
+	const dataBaseUrl = (ref: "userlist" | "info" | "winners") => {
+		const baseurl = `${process.env.FIREBASE_DB_BASE}/leaderboard/${ref}.json?auth=${process.env.FIREBASE_TOKEN}&?print=pretty`
 		return baseurl
 	}
 
@@ -27,8 +26,9 @@ export async function GET(request: NextRequest) {
 		const currentWinners = await lbWinners.json()
 
 		// Fetch new winners of the week
-		const lb = await fetch(dataBaseUrl("userlist"))
-		let newWinners = (await lb.json())?.slice(0, 3) || "NO_WINNER_FOUND"
+		const lbUserlist = await fetch(dataBaseUrl("userlist"), { cache: "no-store" })
+		const newWinners =
+			Object.fromEntries(Object.entries(await lbUserlist.json()).slice(0, 3)) || "NO_WINNER_FOUND"
 
 		// Fetch leaderboard_date date
 		const lbInfo = await fetch(dataBaseUrl("info"), { cache: "no-store" })
@@ -111,31 +111,37 @@ const createFakeLeaderBoard = async (url: string) => {
 		headers: {
 			"Content-Type": "application/json",
 		},
-		body: JSON.stringify([
-			{
-				id: "1",
-				username: "Kaosc",
-				leaderboard_date: 0,
-				score: 0,
-			},
-			{
-				id: "2",
-				username: "Hyle",
-				leaderboard_date: 0,
-				score: 0,
-			},
-			{
-				id: "3",
-				username: "Alex",
-				leaderboard_date: 0,
-				score: 0,
-			},
-			{
+		body: JSON.stringify({
+			"123": {
 				id: "4",
-				username: "Mercer",
 				leaderboard_date: 0,
 				score: 0,
+				username: "Mercer",
 			},
-		]),
+			"321": {
+				id: "4",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Hyle",
+			},
+			"111": {
+				id: "4",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Kiri",
+			},
+			"222": {
+				id: "4",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Kaosc",
+			},
+			"333": {
+				id: "4",
+				leaderboard_date: 0,
+				score: 0,
+				username: "Alex",
+			},
+		}),
 	})
 }
