@@ -1,0 +1,32 @@
+import { NextResponse } from "next/server"
+import type { NextRequest } from "next/server"
+
+export async function GET(request: NextRequest) {
+	if (process.env.NODE_ENV !== "development") {
+		const authHeader = request.headers.get("authorization")
+		if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+			return new Response("Unauthorized Action", {
+				status: 401,
+			})
+		}
+	}
+
+	const status = request.headers.get("Shutdown-Status")
+	const url = `${process.env.FIREBASE_DB_BASE}/leaderboard/info/shutdown.json?auth=${process.env.FIREBASE_TOKEN}`
+
+	// UPDATE LEADERBOARD INFO
+	try {
+		await fetch(url, {
+			method: "PUT",
+			cache: "no-store",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(status),
+		})
+	} catch (e) {
+		return NextResponse.json(`Error on shutting down leaderboard: ${e}`)
+	}
+
+	return NextResponse.json(`>>> Leaderboard shutdown succesful`)
+}
