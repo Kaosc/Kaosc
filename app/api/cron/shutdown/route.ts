@@ -12,6 +12,9 @@ export async function GET(request: NextRequest) {
 	}
 
 	const status = request.headers.get("Shutdown-Status")
+
+	if (status === null) return NextResponse.json("No status specified")
+
 	const url = `${process.env.FIREBASE_DB_BASE}/leaderboard/info/shutdown.json?auth=${process.env.FIREBASE_TOKEN}`
 
 	// UPDATE LEADERBOARD INFO
