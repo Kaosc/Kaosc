@@ -53,7 +53,7 @@ export async function GET(request: NextRequest) {
 		.then(async (response) => await response?.json())
 		.catch((e) => NextResponse.json(`Error on retrieving the leaderboard data: ${e}`))
 
-	if (!leaderboardData) return NextResponse.json("Couldn't retrieve leaderboard data", leaderboardData)
+	if (!leaderboardData) return NextResponse.json(`Couldn't retrieve leaderboard data ${leaderboardData}`)
 
 	// SET NEW WINNERS
 	try {
