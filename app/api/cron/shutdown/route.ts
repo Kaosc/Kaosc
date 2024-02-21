@@ -15,7 +15,8 @@ export async function GET(request: NextRequest) {
 
 	if (status === null) return NextResponse.json("No status specified")
 
-	const url = `${process.env.FIREBASE_DB_BASE}/leaderboard/info/shutdown.json?auth=${process.env.FIREBASE_TOKEN}`
+	const baseRef = process.env.NODE_ENV === "development" ? "leaderboard-debug" : "leaderboard"
+	const url = `${process.env.FIREBASE_DB_BASE}/${baseRef}/info/shutdown.json?auth=${process.env.FIREBASE_TOKEN}`
 
 	// UPDATE LEADERBOARD INFO
 	try {

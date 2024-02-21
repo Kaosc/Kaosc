@@ -43,9 +43,10 @@ export async function GET(request: NextRequest) {
 		}
 	}
 
+	const baseRef = process.env.NODE_ENV === "development" ? "leaderboard-debug" : "leaderboard"
 	const dataBaseUrl = (ref?: Referances) => {
 		const path = ref || ""
-		return `${process.env.FIREBASE_DB_BASE}/leaderboard/${path}.json?auth=${process.env.FIREBASE_TOKEN}&?print=pretty`
+		return `${process.env.FIREBASE_DB_BASE}/${baseRef}/${path}.json?auth=${process.env.FIREBASE_TOKEN}&?print=pretty`
 	}
 
 	// Fetch leaderboard data

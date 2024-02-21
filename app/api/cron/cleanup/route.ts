@@ -11,7 +11,8 @@ export async function GET(request: NextRequest) {
 		}
 	}
 
-	const winnersUrl = `${process.env.FIREBASE_DB_BASE}/leaderboard/winners.json?auth=${process.env.FIREBASE_TOKEN}&?print=pretty`
+	const baseRef = process.env.NODE_ENV === "development" ? "leaderboard-debug" : "leaderboard"
+	const winnersUrl = `${process.env.FIREBASE_DB_BASE}/${baseRef}/winners.json?auth=${process.env.FIREBASE_TOKEN}&?print=pretty`
 
 	const winners = await fetch(winnersUrl, {
 		method: "GET",
