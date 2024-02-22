@@ -30,7 +30,7 @@ export async function GET(request: NextRequest) {
 
 	// Convert winners keys to array
 	if (!winners) {
-		return NextResponse.json(`>>> No winners data found: ${winners}`)
+		return NextResponse.json(`>>> No winners data found to clean: ${winners}`)
 	}
 
 	const dateArray = Object.keys(winners)

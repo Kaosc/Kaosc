@@ -59,6 +59,7 @@ export async function GET(request: NextRequest) {
 	// SET NEW WINNERS
 	try {
 		const newWinners = Object.values(leaderboardData.userlist)
+			.filter((user) => user !== null)
 			.sort((a, b) => b.score - a.score)
 			.slice(0, 3)
 

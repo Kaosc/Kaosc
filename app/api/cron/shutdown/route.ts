@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
 		}
 	}
 
-	const status = request.headers.get("Shutdown-Status")
+	const status = process.env.NODE_ENV === "development" ? "false" : request.headers.get("Shutdown-Status")
 
 	if (status === null) return NextResponse.json("No status specified")
 
@@ -32,5 +32,5 @@ export async function GET(request: NextRequest) {
 		return NextResponse.json(`Error on shutting down leaderboard: ${e}`)
 	}
 
-	return NextResponse.json(`>>> Leaderboard shutdown succesful`)
+	return NextResponse.json(`>>> Leaderboard shutdown: ${status}`)
 }
