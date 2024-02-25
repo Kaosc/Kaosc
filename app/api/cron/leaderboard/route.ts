@@ -1,20 +1,25 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 
-type Referances = "userlist" | "info" | "winners"
-
 type Leaderboard = {
 	info: LeaderboardInfo
 	userlist: LeaderboardUser[]
-	winners: LeaderboardUser[]
-}
+	winners: {
+		[date: string]: Winners
+	}
+	promocodes: string[]
+} | null
 
 type LeaderboardInfo = {
 	leaderboard_date: string
 	learderboard_time: string
 	alert: {
-		text: string
+		text: {
+			tr: ""
+			en: ""
+		}
 		align: "center" | "left"
+		fontSize: number
 	}
 	shutdown: boolean
 	reward: {
@@ -22,6 +27,8 @@ type LeaderboardInfo = {
 		tr: string
 		en: string
 	}
+	introduction: boolean
+	notification: boolean
 }
 
 type LeaderboardUser = {
@@ -30,8 +37,10 @@ type LeaderboardUser = {
 	score: number
 	username: string
 	email: string
-	promocode?: string
+	promoCode?: string
 }
+
+type Winners = LeaderboardUser[] | "NO_WINNERS_FOUND"
 
 export async function GET(request: NextRequest) {
 	if (process.env.NODE_ENV !== "development") {
@@ -44,62 +53,63 @@ export async function GET(request: NextRequest) {
 	}
 
 	const baseRef = process.env.NODE_ENV === "development" ? "leaderboard-debug" : "leaderboard"
-	const dataBaseUrl = (ref?: Referances) => {
-		const path = ref || ""
-		return `${process.env.FIREBASE_DB_BASE}/${baseRef}/${path}.json?auth=${process.env.FIREBASE_TOKEN}&?print=pretty`
+	const dataBaseUrl = `${process.env.FIREBASE_DB_BASE}/${baseRef}.json?auth=${process.env.FIREBASE_TOKEN}&?print=pretty`
+
+	let leaderboardData: Leaderboard = null
+
+	try {
+		leaderboardData = await fetch(dataBaseUrl, { cache: "no-store" }).then(
+			async (response) => await response?.json()
+		)
+	} catch (e) {
+		return NextResponse.json(`Error on retrieving the leaderboard data: ${e}`)
 	}
 
-	// Fetch leaderboard data
-	const leaderboardData: Leaderboard = await fetch(dataBaseUrl(), { cache: "no-store" })
-		.then(async (response) => await response?.json())
-		.catch((e) => NextResponse.json(`Error on retrieving the leaderboard data: ${e}`))
+	if (!leaderboardData) {
+		return NextResponse.json(`Couldn't retrieve leaderboard data ${leaderboardData}`)
+	}
 
-	if (!leaderboardData) return NextResponse.json(`Couldn't retrieve leaderboard data ${leaderboardData}`)
+	const userList = leaderboardData?.userlist ? Object.values(leaderboardData?.userlist) : []
+	let newWinners: Winners = "NO_WINNERS_FOUND"
+	let assignedPromoCodes: string[] = []
 
-	// SET NEW WINNERS
-	try {
-		const newWinners = Object.values(leaderboardData.userlist)
-			.filter((user) => user !== null)
+	if (userList.length > 0) {
+		newWinners = userList
+			.filter((user) => user !== null && user.score >= 250)
 			.sort((a, b) => b.score - a.score)
 			.slice(0, 3)
 
-		// Update winners with new winners data
-		const payload = {
-			...leaderboardData.winners,
-			[leaderboardData?.info?.leaderboard_date]: newWinners,
+		if (newWinners.length > 0) {
+			// Assign promo codes
+			for (let i = 0; i < newWinners.length; i++) {
+				const promoCode = leaderboardData?.promocodes[i]
+
+				if (promoCode) {
+					newWinners[i].promoCode = promoCode
+					assignedPromoCodes.push(promoCode)
+				} else {
+					newWinners[i].promoCode = "NO_CODE_LEFT"
+				}
+			}
 		}
-
-		await fetch(dataBaseUrl("winners"), {
-			method: "PUT",
-			cache: "no-store",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(payload),
-		})
-	} catch (e) {
-		return NextResponse.json(`Error on saving winners: ${e}`)
 	}
 
-	// DELETE USERLIST
-	try {
-		await fetch(dataBaseUrl("userlist"), {
-			method: "DELETE",
-			cache: "no-store",
-		})
-	} catch (e) {
-		return NextResponse.json(`Error on deleting user list: ${e}`)
-	}
-
-	// UPDATE LEADERBOARD INFO
-	try {
-		const payload: LeaderboardInfo = {
+	const payload: Leaderboard = {
+		info: {
 			...leaderboardData.info,
 			leaderboard_date: getCurrentDate(),
 			learderboard_time: getCurrentTime(),
-		}
+		},
+		userlist: [],
+		promocodes: leaderboardData?.promocodes.filter((code) => !assignedPromoCodes.includes(code)),
+		winners: {
+			...leaderboardData.winners,
+			[leaderboardData?.info?.leaderboard_date]: newWinners,
+		},
+	}
 
-		await fetch(dataBaseUrl("info"), {
+	try {
+		await fetch(dataBaseUrl, {
 			method: "PUT",
 			cache: "no-store",
 			headers: {
