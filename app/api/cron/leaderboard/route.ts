@@ -4,10 +4,11 @@ import type { NextRequest } from "next/server"
 type Leaderboard = {
 	info: LeaderboardInfo
 	userlist: LeaderboardUser[]
+	promocodes: string[]
+	totalUsers: number
 	winners: {
 		[date: string]: Winners
 	}
-	promocodes: string[]
 } | null
 
 type LeaderboardInfo = {
@@ -101,6 +102,7 @@ export async function GET(request: NextRequest) {
 			learderboard_time: getCurrentTime(),
 		},
 		userlist: [],
+		totalUsers: 0,
 		promocodes: leaderboardData?.promocodes.filter((code) => !assignedPromoCodes.includes(code)),
 		winners: {
 			...leaderboardData.winners,
