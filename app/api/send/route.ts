@@ -1,38 +1,38 @@
 import { NextResponse } from "next/server"
-import SendGrid from "@sendgrid/mail"
-
-import { SUPPORT_MAIL } from "@/utils/constants"
 
 export async function POST(request: Request) {
-	if (process.env.NODE_ENV !== "development") {
-		const authHeader = request.headers.get("authorization")
-		if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-			return new Response("Auth rejected", {
-				status: 401,
-			})
-		}
-	}
-
 	const { sender, subject, message } = await request.json()
 
-	SendGrid.setApiKey(process.env.SENDGRID_API_KEY as string)
-
-	try {
-		const data = await SendGrid.send({
-			from: SUPPORT_MAIL,
-			replyTo: SUPPORT_MAIL,
-			to: process.env.RECIEVER_EMAIL,
-			subject: "KAOSC WEB CONTACT",
-			html: `
-			<div>
-				<h4> SENDER: ${sender}</h4>
-				<h4> SUBJECT: ${subject}</h4>
-				</br></br>
-				<p>${message}</p>
-			</div>`,
-		})
-		return NextResponse.json(data)
-	} catch (error) {
-		return NextResponse.json({ error })
+	const emailData = {
+		from: "Acme <onboarding@resend.dev>",
+		to: [process.env.RECIEVER_EMAIL],
+		subject: "KAOSC WEB CONTACT",
+		html: `
+		<div>
+			<h4> SENDER: ${sender}</h4>
+			<h4> SUBJECT: ${subject}</h4>
+			</br></br>
+			<p>${message}</p>
+		</div>`,
 	}
+
+	return await fetch("https://api.resend.com/emails", {
+		method: "POST",
+		headers: {
+			Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify(emailData),
+	})
+		.then((response) => {
+			if (!response.ok) {
+				return NextResponse.json(`Email sent`)
+			}
+		})
+		.then((data) => {
+			return NextResponse.json(`Email sent: ${data}`)
+		})
+		.catch((e) => {
+			return NextResponse.json(`HTTP error! Status: ${e}`)
+		})
 }
