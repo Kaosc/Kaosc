@@ -33,7 +33,7 @@ export default function ContactForm() {
 		await fetch("/api/send", {
 			method: "POST",
 			headers: {
-				authorization: `Bearer ${process.env.CRON_SECRET}`,
+				Authorization: `Bearer ${process.env.CRON_SECRET}`,
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({
@@ -55,6 +55,11 @@ export default function ContactForm() {
 	}
 
 	const validate = () => {
+		if (process.env.NODE_ENV === "development") {
+			sendEmail(email.sender, email.subject, email.message)
+			return
+		}
+
 		// check email
 		if (!email.sender || !email.sender.includes("@")) {
 			setFromError("Invalid email")

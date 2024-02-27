@@ -7,7 +7,7 @@ export async function POST(request: Request) {
 	if (process.env.NODE_ENV !== "development") {
 		const authHeader = request.headers.get("authorization")
 		if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-			return new Response("Unauthorized Action", {
+			return new Response("Auth rejected", {
 				status: 401,
 			})
 		}
