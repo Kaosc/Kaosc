@@ -8,7 +8,7 @@ import HeaderMargin from "@/components/layout/NavbarMargin"
 
 export const metadata = {
 	title: "Kaosc",
-	description: "An individual Dev that makes products for mobile and web",
+	description: "Individual developer, creates products for both mobile and web platforms.",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
