@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 
-// TODO: LAST FRIDAY OF THE MONTH
 export async function GET(request: NextRequest) {
 	if (process.env.NODE_ENV !== "development") {
 		const authHeader = request.headers.get("authorization")
