@@ -33,7 +33,7 @@ export default function ContactForm() {
 		await fetch("/api/send", {
 			method: "POST",
 			headers: {
-				Authorization: `${process.env.CRON_SECRET}`,
+				Authorization: `Bearer ${process.env.CRON_SECRET}`,
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({
