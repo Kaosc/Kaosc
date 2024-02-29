@@ -35,6 +35,13 @@ export async function GET(request: NextRequest) {
 
 	const dateArray = Object.keys(winners)
 
+	/**
+	 * 	"2024-03-29" : {
+	 * 		...user
+	 * 	}
+	 * 	---------------
+	 * 	"2024-03-29" : "NO_WINNERS_FOUND"
+	 */
 	if (dateArray.length === 1) {
 		return NextResponse.json(">>> No need to cleanup winners data")
 	}

@@ -131,16 +131,21 @@ export async function GET(request: NextRequest) {
 
 const getCurrentDate = () => {
 	const now = new Date()
-	const year = now.getFullYear()
-	const month = String(now.getMonth() + 1).padStart(2, "0")
-	const day = String(now.getDate()).padStart(2, "0")
+	const options = { timeZone: "Europe/Istanbul" }
+	const year = now.toLocaleString("en-US", { ...options, year: "numeric" })
+	const month = now.toLocaleString("en-US", { ...options, month: "2-digit" })
+	const day = now.toLocaleString("en-US", { ...options, day: "2-digit" })
 	return `${year}-${month}-${day}`
 }
 
 const getCurrentTime = () => {
 	const now = new Date()
-	const hours = String(now.getHours()).padStart(2, "0")
-	const minutes = String(now.getMinutes()).padStart(2, "0")
-	const seconds = String(now.getSeconds()).padStart(2, "0")
+	const options = { timeZone: "Europe/Istanbul" }
+	const hours = String(now.toLocaleString("en-US", { ...options, hour: "2-digit", hour12: false })).padStart(
+		2,
+		"0"
+	)
+	const minutes = String(now.toLocaleString("en-US", { ...options, minute: "2-digit" })).padStart(2, "0")
+	const seconds = String(now.toLocaleString("en-US", { ...options, second: "2-digit" })).padStart(2, "0")
 	return `${hours}:${minutes}:${seconds}`
 }
