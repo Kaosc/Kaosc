@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 
+export const MINIMUM_SCORE_TO_WIN = 100
+
 type Leaderboard = {
 	info: LeaderboardInfo
 	userlist: LeaderboardUser[]
@@ -71,16 +73,16 @@ export async function GET(request: NextRequest) {
 	}
 
 	const userList = leaderboardData?.userlist ? Object.values(leaderboardData?.userlist) : []
-	let newWinners: Winners = "NO_WINNERS_FOUND"
+	let newWinners: Winners = []
 	let assignedPromoCodes: string[] = []
 
 	if (userList.length > 0) {
 		newWinners = userList
-			.filter((user) => user !== null && user.score >= 250)
+			.filter((user) => user !== null && user.score >= MINIMUM_SCORE_TO_WIN)
 			.sort((a, b) => b.score - a.score)
 			.slice(0, 3)
 
-		if (newWinners.length > 0) {
+		if (Array.isArray(newWinners) && newWinners?.length > 0) {
 			// Assign promo codes
 			for (let i = 0; i < newWinners.length; i++) {
 				const promoCode = leaderboardData?.promocodes[i]
@@ -92,6 +94,8 @@ export async function GET(request: NextRequest) {
 					newWinners[i].promoCode = "NO_CODE_LEFT"
 				}
 			}
+		} else {
+			newWinners = "NO_WINNERS_FOUND"
 		}
 	}
 
