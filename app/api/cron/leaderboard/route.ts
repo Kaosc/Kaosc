@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 
-export const MINIMUM_SCORE_TO_WIN = 100
-
 type Leaderboard = {
 	info: LeaderboardInfo
 	userlist: LeaderboardUser[]
@@ -55,6 +53,7 @@ export async function GET(request: NextRequest) {
 		}
 	}
 
+	const MINIMUM_SCORE_TO_WIN = 100
 	const baseRef = process.env.NODE_ENV === "development" ? "leaderboard-debug" : "leaderboard"
 	const dataBaseUrl = `${process.env.FIREBASE_DB_BASE}/${baseRef}.json?auth=${process.env.FIREBASE_TOKEN}&?print=pretty`
 
