@@ -1,0 +1,20 @@
+{
+   "quickcopy": {
+      "sale": false,
+      "count": "5",
+      "title": "",
+      "description": ""
+   },
+   "driverbook": {
+      "sale": false,
+      "count": "2",
+      "title": {
+         "tr": "",
+         "en": ""
+      },
+      "description": {
+         "tr": "",
+         "en": ""
+      }
+   }
+}
