@@ -813,7 +813,6 @@ adnuro.com, 2882096573, RESELLER
 newsusadigital.com, 1001719521, RESELLER
 balloonlabs.ai, 9173515033, RESELLER
 advanttechnology.com, 1126183541, RESELLER
-widesound.io, 1674308979, RESELLER
 aluna.co, 2335974998, RESELLER
 boostappi.com, 3038253635, RESELLER
 alpineinteractivegroup.com, 9263716895, RESELLER
@@ -831,7 +830,6 @@ rubiconproject.com, 25496, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 24914, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 24908, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 24520, RESELLER, 0bfd66d529a55807
-rubiconproject.com, 25318, RESELLER, 0bfd66d529a55807
 bold-win.com, 166, RESELLER, 71746737d0bab951
 my-cast.tv, 987032, RESELLER
 rubiconproject.com, 25748, RESELLER, 0bfd66d529a55807
@@ -883,3 +881,38 @@ tremorhub.com, 9l6ha-9w3wc, RESELLER, 1a4e959a1b50034a
 telaria.com, 9l6ha-9w3wc, RESELLER, 1a4e959a1b50034a
 xandr.com, 15769, RESELLER
 appnexus.com, 15769, RESELLER, f5ab79cb980f11d1
+smartyads.com, 300045, RESELLER, fd2bde0ff2e62c5d
+video.unrulymedia.com, 645663965, RESELLER
+advertising.com, 23089, RESELLER
+advertising.com, 28605, RESELLER
+aniview.com, 603f65a2e291680ef30af9c7, RESELLER, 78b21b97965ec3f8
+appnexus.com, 12637, RESELLER, f5ab79cb980f11d1
+appnexus.com, 9382, RESELLER, f5ab79cb980f11d1
+google.com, pub-6346866704322274, RESELLER, f08c47fec0942fa0
+google.com, pub-3565385483761681, RESELLER, f08c47fec0942fa0
+google.com, pub-5717092533913515, RESELLER, f08c47fec0942fa0
+pubmatic.com, 159277, RESELLER,
+pubmatic.com, 161335, RESELLER, 5d62403b186f2ace
+pubmatic.com, 160993, RESELLER, 5d62403b186f2ace
+pubmatic.com, 161058, RESELLER, 5d62403b186f2ace
+rubiconproject.com, 13918, RESELLER, 0bfd66d529a55807
+synacor.com, 82171, RESELLER, e108f11b2cdf7d5b
+yahoo.com, 59244, RESELLER
+loopme.com, 9718, RESELLER, 6c8d5f95897a5a3b
+Improvedigital.com, 1699, RESELLER
+openx.com, 543878511, RESELLER, 6a698e2ec38604c6
+bidease.com, bidease_seller_34, RESELLER
+tredio.io, 357a6fdf7642bf815a88822c447d9dc433546, RESELLER
+video.unrulymedia.com, 819070080, RESELLER
+bold-win.com, 807, RESELLER, 71746737d0bab951
+flat-ads.com, 2196901, RESELLER
+google.com, pub-3990748024667386, RESELLER, f08c47fec0942fa0
+criteo.com, B-071797, RESELLER, 9fac4a4a87c2a44f
+themediagrid.com, SH96GF, RESELLER, 35d5010d7789b49d
+lijit.com, 500520, RESELLER, fafdf38b16bf6b2b
+alpecs.com, 2448028124, RESELLER
+aceex.io, 1697, RESELLER
+video.unrulymedia.com, 949394431, RESELLER
+appaspire.com, 97517, RESELLER
+contextweb.com, 563195, RESELLER, 89ff185a4c4e857c
+smaato.com, 1100056110, RESELLER, 07bcf65f187117b4
