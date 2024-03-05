@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 
+import { SUPPORT_MAIL } from "@/utils/constants"
+
 type Leaderboard = {
 	info: LeaderboardInfo
 	userlist: LeaderboardUser[]
@@ -38,6 +40,7 @@ type LeaderboardUser = {
 	score: number
 	username: string
 	email: string
+	lang: string
 	promoCode?: string
 }
 
@@ -98,6 +101,20 @@ export async function GET(request: NextRequest) {
 		}
 	}
 
+	// Send mails
+	if (Array.isArray(newWinners) && newWinners.length > 0) {
+		newWinners = await Promise.all(
+			newWinners.map(async (winner) => {
+				const { username, email, promoCode, lang } = winner
+				const mailSent = await sendEmail(username, email, promoCode, lang)
+				return {
+					...winner,
+					mailSent: mailSent,
+				}
+			})
+		)
+	}
+
 	const payload: Leaderboard = {
 		info: {
 			...leaderboardData.info,
@@ -127,6 +144,57 @@ export async function GET(request: NextRequest) {
 	}
 
 	return NextResponse.json(`>>> New week started succesfully`)
+}
+
+export default async function sendEmail(
+	username: string,
+	email: string,
+	promoCode: string | undefined,
+	lang: string | undefined
+): Promise<boolean> {
+	if (!promoCode) return false
+
+	const tempId = lang === "en" ? "d-ec7a5e33f2da494f8062699fc96ab72e" : "d-a778f53b7e6b4f57a7f63b4a690fd2ee"
+
+	const requestBody = {
+		from: {
+			email: SUPPORT_MAIL,
+		},
+		personalizations: [
+			{
+				to: [
+					{
+						email: email,
+					},
+				],
+				dynamic_template_data: {
+					promoCode: promoCode,
+					username: username,
+				},
+			},
+		],
+		template_id: tempId,
+	}
+
+	return await fetch("https://api.sendgrid.com/v3/mail/send", {
+		method: "POST",
+		headers: {
+			Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify(requestBody),
+	})
+		.then(async (response) => {
+			if (response.ok) {
+				return true
+			} else {
+				return false
+			}
+		})
+		.catch((e) => {
+			console.warn(e)
+			return false
+		})
 }
 
 const getCurrentDate = () => {
