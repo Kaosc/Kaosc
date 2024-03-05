@@ -146,7 +146,7 @@ export async function GET(request: NextRequest) {
 	return NextResponse.json(`>>> New week started succesfully`)
 }
 
-export default async function sendEmail(
+async function sendEmail(
 	username: string,
 	email: string,
 	promoCode: string | undefined,
