@@ -30,7 +30,7 @@ export default function ContactForm() {
 
 	const sendEmail = async (sender: string, subject: string, message: string) => {
 		setSending(true)
-		await fetch("/api/send", {
+		await fetch("/api/resend", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

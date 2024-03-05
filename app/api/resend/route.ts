@@ -6,7 +6,7 @@ export async function POST(request: Request) {
 	const emailData = {
 		from: "Acme <onboarding@resend.dev>",
 		to: [process.env.RECIEVER_EMAIL],
-		subject: "KAOSC WEB CONTACT",
+		subject: "WEBSITE CONTACT",
 		html: `
 		<div>
 			<h4> SENDER: ${sender}</h4>
