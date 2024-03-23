@@ -8,7 +8,7 @@ import HeaderMargin from "@/components/layout/NavbarMargin"
 
 export const metadata = {
 	title: "Kaosc",
-	description: "Individual developer, creates products for both mobile and web platforms.",
+	description: "Indie dev that creating products for mobile and web.",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<head>
 				<link
 					rel="icon"
-					href="favicon.png"
+					href="favicon.ico"
 				/>
 				<meta
 					name="google-site-verification"
@@ -52,11 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					content="#000000"
 				/>
 				<meta name="darkreader-lock" />
-				<script
-					async
-					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2104233591204201"
-					crossOrigin="anonymous"
-				/>
 			</head>
 			<body
 				id="home"
