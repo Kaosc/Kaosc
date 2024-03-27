@@ -67,7 +67,7 @@
         />
       </kbd>
       <br>
-      <small>   Cat Bot   </small>
+      <small>  Cat Bot  </small>
     </a>
   </td>
 
