@@ -1,17 +1,17 @@
 <h1>Products</h1>
   
 <table>
-  <td align="center">
+  <td align="center" border="0">
     <a href="https://play.google.com/store/apps/details?id=com.Kaosc.quickcopy">
       <kbd>
         <img
-          height="60" 
-          width="60"
+          height="50" 
+          width="50"
           src="./public/assets/products/quickcopy/logo.png"
          />
       </kbd>
       <br />
-      <small>  Quick Copy  </small>
+      <small>Quick Copy</small>
     </a>
   </td>
 
@@ -19,13 +19,13 @@
     <a href="https://play.google.com/store/apps/details?id=com.Kaosc.SrcKitab">
       <kbd>
         <img
-          height="60" 
-          width="60"
+          height="50" 
+          width="50"
           src="./public/assets/products/driverbook/logo.png"
         /> 
       </kbd>
       <br>
-      <small> Driver Book </small>
+      <small>Driver Book</small>
     </a>
   </td>
 
@@ -33,8 +33,8 @@
     <a href="https://chrome.google.com/webstore/detail/bookmark-hub/eikgkolbokmiboemcnhdpfcpnilkomhd">
       <kbd>
         <img
-          height="60" 
-          width="60"
+          height="50" 
+          width="50"
           src="./public/assets/products/bookmarkhub/logo.png"
         /> 
       </kbd>
@@ -47,8 +47,8 @@
     <a href="https://chrome.google.com/webstore/detail/sunset-sunrise/gkfelccnlfiipepkjfmgbkaebppelfma">
       <kbd>
         <img
-          height="60" 
-          width="60"
+          height="50" 
+          width="50"
           src="./public/assets/products/sunsetsunrise/logo.png"
         /> 
       </kbd>
@@ -61,13 +61,13 @@
     <a href="https://top.gg/bot/1052869011366477844">
       <kbd>
         <img
-          height="60" 
-          width="60"
+          height="50" 
+          width="50"
           src="https://raw.githubusercontent.com/Kaosc/discord-cat-bot/master/assets/cat_square.png"
         />
       </kbd>
       <br>
-      <small>    Cat Bot    </small>
+      <small>   Cat Bot   </small>
     </a>
   </td>
 
@@ -75,8 +75,8 @@
     <a href="https://kavaklakerda.vercel.app">
       <kbd>
         <img
-          height="60" 
-          width="60"
+          height="50" 
+          width="50"
           src="./public/assets/products/kavaklakerda/logo.png"
         /> 
       </kbd>
@@ -89,13 +89,12 @@
     <a href="https://marketplace.visualstudio.com/items?itemName=Kaosc.hyle">
       <kbd> 
         <img 
-          height="60" 
-          width="60"
+          height="50" 
+          width="50"
           src="./public/assets/products/hyletheme/logo.png" /> 
       </kbd>
       <br />
-      <small> Hyle Theme </small>
+      <small>Hyle Theme</small>
     </a>
   </td>
-
 </table>
