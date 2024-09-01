@@ -8,7 +8,7 @@
 			align="center"
 			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/quickcopy/logo.png"
 		/> 
-		<a href="https://play.google.com/store/apps/details?id=com.Kaosc.quickcopy">
+		<a href="https://play.google.com/store/apps/details?id=com.Kaosc.quickcopy" target="_blank">
 			<small>Quick Copy</small>
 		</a>
 	</td>
@@ -19,7 +19,7 @@
 			align="center"
 			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/driverbook/logo.png"
 		/> 
-		<a href="https://play.google.com/store/apps/details?id=com.Kaosc.SrcKitab">
+		<a href="https://play.google.com/store/apps/details?id=com.Kaosc.SrcKitab" target="_blank">
 			<small>Driver Book</small>
 		</a>
 	</td>
@@ -30,7 +30,7 @@
 			align="center"
 			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/bookmarkhub/logo.png"
 		/> 
-		<a href="https://chrome.google.com/webstore/detail/bookmark-hub/eikgkolbokmiboemcnhdpfcpnilkomhd">
+		<a href="https://chrome.google.com/webstore/detail/bookmark-hub/eikgkolbokmiboemcnhdpfcpnilkomhd" target="_blank">
 			<small>Bookmark Hub</small>
 		</a>
 	</td>
@@ -41,7 +41,7 @@
 			align="center"
 			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/sunsetsunrise/logo.png"
 		/> 
-		<a href="https://chrome.google.com/webstore/detail/sunset-sunrise/gkfelccnlfiipepkjfmgbkaebppelfma">
+		<a href="https://chrome.google.com/webstore/detail/sunset-sunrise/gkfelccnlfiipepkjfmgbkaebppelfma" target="_blank">
 			<small>Sunset Sunrise</small>
 		</a>
 	</td>
@@ -54,7 +54,7 @@
 			align="center"
 			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/catbot/logo.png"
 		/> 
-		<a href="https://top.gg/bot/1052869011320477844">
+		<a href="https://top.gg/bot/1052869011320477844" target="_blank">
 			<small>Cat Bot</small>
 		</a>
 	</td>
@@ -65,7 +65,7 @@
 			align="center"
 			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/kavaklakerda/logo.png"
 		/> 
-		<a href="https://kavaklakerda.vercel.app">
+		<a href="https://kavaklakerda.vercel.app" target="_blank">
 			<small>Kavaklakerda</small>
 		</a>
 	</td>
@@ -76,7 +76,7 @@
 			align="center"
 			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/hyletheme/logo.png"
 		/> 
-		<a href="https://marketplace.visualstudio.com/items?itemName=Kaosc.hyle">
+		<a href="https://marketplace.visualstudio.com/items?itemName=Kaosc.hyle" target="_blank">
 			<small>Hyle Theme</small>
 		</a>
 	</td>
