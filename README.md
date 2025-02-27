@@ -54,7 +54,7 @@
 			align="center"
 			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/catbot/logo.png"
 		/> 
-		<a href="https://top.gg/bot/1052869011320477844" target="_blank">
+		<a href="https://top.gg/bot/1052869011366477844?s=0832d84bff8e3" target="_blank">
 			<small>Cat Bot</small>
 		</a>
 	</td>
