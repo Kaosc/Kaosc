@@ -80,4 +80,15 @@
 			<small>Hyle Theme</small>
 		</a>
 	</td>
+	<td>
+		<img
+			height="20"
+			width="20"
+			align="center"
+			src="https://lh3.googleusercontent.com/ak-3vc_3akW-gNaXSWtzMzbEhyUiSj7DfSn93ssFyZPhGsFZZTmT6lkXe-bw9azifLUgB272tP1vBte-axssG6ELySQ=s60"
+		/> 
+		<a href="https://chromewebstore.google.com/detail/night-city/hbgdgmaingeagmgmcfjpfndeamciggbl" target="_blank">
+			<small>Night City Theme</small>
+		</a>
+	</td>
 </table>
