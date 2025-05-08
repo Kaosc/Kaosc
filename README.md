@@ -74,6 +74,17 @@
 			height="20"
 			width="20"
 			align="center"
+			src="https://ozgekorkmaz.net/images/logo-transparent.png"
+		/> 
+		<a href="https://ozgekorkmaz.net" target="_blank">
+			<small>Özge Korkmaz</small>
+		</a>
+	</td>
+	<td>
+		<img
+			height="20"
+			width="20"
+			align="center"
 			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/hyletheme/logo.png"
 		/> 
 		<a href="https://marketplace.visualstudio.com/items?itemName=Kaosc.hyle" target="_blank">
