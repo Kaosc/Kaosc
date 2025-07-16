@@ -6,7 +6,7 @@
 			height="22"
 			width="22"
 			align="center"
-			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/quickcopy/logo.png"
+			src="https://play-lh.googleusercontent.com/cigk4g5HlmZdDajjMVWlHq7dbJ27t-XW2Cbmj4XObPjTkYttaw_yZUrkS_hW6hMUDQ=w240-h480-rw"
 		/> 
 		<a href="https://play.google.com/store/apps/details?id=com.Kaosc.quickcopy" target="_blank">
 			<small>Quick Copy</small>
@@ -17,7 +17,7 @@
 			height="22"
 			width="22"
 			align="center"
-			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/driverbook/logo.png"
+			src="https://play-lh.googleusercontent.com/G88arG_WBP0zgCfXsA-sZI1ouHJRirZ37kjI0WhnUgPV4KpUGhiNAQyzveTvE2Gshw=w240-h480-rw"
 		/> 
 		<a href="https://play.google.com/store/apps/details?id=com.Kaosc.SrcKitab" target="_blank">
 			<small>Driver Book</small>
@@ -28,7 +28,7 @@
 			height="18"
 			width="20"
 			align="center"
-			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/bookmarkhub/logo.png"
+			src="https://lh3.googleusercontent.com/lSJhZw7pGmXQcUQN4ZO7bLOsXHbLKKslqxrrsvpe2k5Jl8vh6EyZYhR5qO3xYJJyUN9WjcYzLGJaw2X0TePPsMuvDw=s60"
 		/> 
 		<a href="https://chrome.google.com/webstore/detail/bookmark-hub/eikgkolbokmiboemcnhdpfcpnilkomhd" target="_blank">
 			<small>Bookmark Hub</small>
@@ -39,7 +39,7 @@
 			height="21"
 			width="21"
 			align="center"
-			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/sunsetsunrise/logo.png"
+			src="https://lh3.googleusercontent.com/PFta7M6CCporSkfaWGRIuW-DMk17NzNqmRnd8yK1uda220vn9S_baLgm4nLmlC3RSHkY78gUQk4pfQiivz4cDmPsWQ=s60"
 		/> 
 		<a href="https://chrome.google.com/webstore/detail/sunset-sunrise/gkfelccnlfiipepkjfmgbkaebppelfma" target="_blank">
 			<small>Sunset Sunrise</small>
@@ -52,7 +52,7 @@
 			height="20"
 			width="20"
 			align="center"
-			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/catbot/logo.png"
+			src="https://cdn.discordapp.com/avatars/1052869011366477844/2199842be7adbc385b2b70d683cc6e6d.png"
 		/> 
 		<a href="https://top.gg/bot/1052869011366477844?s=0832d84bff8e3" target="_blank">
 			<small>Cat Bot</small>
@@ -63,7 +63,7 @@
 			height="19"
 			width="19"
 			align="center"
-			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/kavaklakerda/logo.png"
+			src="https://kavaklakerda.vercel.app/favicon.ico"
 		/> 
 		<a href="https://kavaklakerda.vercel.app" target="_blank">
 			<small>Kavaklakerda</small>
@@ -85,7 +85,7 @@
 			height="20"
 			width="20"
 			align="center"
-			src="https://raw.githubusercontent.com/Kaosc/product-assets/main/products/hyletheme/logo.png"
+			src="https://kaosc.gallerycdn.vsassets.io/extensions/kaosc/hyle/0.4.2/1747780119119/Microsoft.VisualStudio.Services.Icons.Default"
 		/> 
 		<a href="https://marketplace.visualstudio.com/items?itemName=Kaosc.hyle" target="_blank">
 			<small>Hyle Theme</small>
