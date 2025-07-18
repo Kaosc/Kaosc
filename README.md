@@ -77,7 +77,7 @@
 			src="https://ozgekorkmaz.net/images/logo-transparent.png"
 		/> 
 		<a href="https://ozgekorkmaz.net" target="_blank">
-			<small>Özge Korkmaz</small>
+			<small>ozgekorkmaz.net</small>
 		</a>
 	</td>
 	<td>
