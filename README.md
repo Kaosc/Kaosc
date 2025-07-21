@@ -66,7 +66,7 @@
 			src="https://kavaklakerda.vercel.app/favicon.ico"
 		/> 
 		<a href="https://kavaklakerda.vercel.app" target="_blank">
-			<small>Kavaklakerda</small>
+			<small>Kavak Lakerda</small>
 		</a>
 	</td>
 	<td>
