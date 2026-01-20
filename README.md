@@ -56,6 +56,17 @@
 			<small>Sunset Sunrise</small>
 		</a>
 	</td>
+		<td>
+		<img
+			height="20"
+			width="20"
+			align="center"
+			src="https://iremyildizinteriors.com/favicon.ico"
+		/> 
+		<a href="https://iremyildizinteriors.com" target="_blank">
+			<small>İrem Yıldız Interiors</small>
+		</a>
+	</td>
 </table>
 <table>
 	<td>
@@ -89,17 +100,6 @@
 		/> 
 		<a href="https://ozgekorkmaz.net" target="_blank">
 			<small>Özge Korkmaz</small>
-		</a>
-	</td>
-		<td>
-		<img
-			height="20"
-			width="20"
-			align="center"
-			src="https://iremyildizinteriors.com/favicon.ico"
-		/> 
-		<a href="https://iremyildizinteriors.com" target="_blank">
-			<small>İrem Yıldız Interiors</small>
 		</a>
 	</td>
 	<td>
