@@ -41,7 +41,7 @@
 	</td>
 	<td>
 		<img height="19" width="19" align="center" src="https://fishdelicatessen.vercel.app/favicon.ico" />
-		<a href="https://kavaklakerda.vercel.app" target="_blank">
+		<a href="https://fishdelicatessen.vercel.app" target="_blank">
 			<small>Fish Delicatessen</small>
 		</a>
 	</td>
