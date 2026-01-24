@@ -40,9 +40,9 @@
 		</a>
 	</td>
 	<td>
-		<img height="19" width="19" align="center" src="https://kavaklakerda.vercel.app/favicon.ico" />
+		<img height="19" width="19" align="center" src="https://fishdelicatessen.vercel.app/favicon.ico" />
 		<a href="https://kavaklakerda.vercel.app" target="_blank">
-			<small>Kavak Lakerda</small>
+			<small>Fish Delicatessen</small>
 		</a>
 	</td>
 </table>
