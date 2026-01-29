@@ -20,8 +20,8 @@
 		</a>
 	</td>
 	<td>
-		<img height="22" width="22" align="center" src="https://play-lh.googleusercontent.com/3vswNNYMjjet5mNzIHjgi7M5d1GsrcRwspfURM_roUY3hiKy38K298SIlfKV831joQpER_eEgvV5NQczFnZQlA=w240-h480-rw" />
-		<a href="https://play.google.com/store/apps/details?id=com.Kaosc.malatyamuseumguide" target="_blank">
+		<img height="22" width="22" align="center" src="https://play-lh.googleusercontent.com/1-aC7KlD_fuL3XNc44medAk0VWa1xlvYLB2X-2DULG5qTwiuhwse6eQW7GnjPL6QyE5NUWeADjWczAuhR2shN4w=w240-h480-rw" />
+		<a href="https://play.google.com/store/apps/details?id=com.Kaosc.museumguide" target="_blank">
 			<small>Malatya Museum App</small>
 		</a>
 	</td>
