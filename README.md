@@ -28,7 +28,7 @@
 </table>
 <table>
 	<td>
-		<img height="20" width="20" align="center" src="https://ozgekorkmaz.net/images/logo-transparent.png" />
+		<img height="20" width="20" align="center" src="https://ozgekorkmaz.net/images/logo-transparent.webp" />
 		<a href="https://ozgekorkmaz.net" target="_blank">
 			<small>Özge Korkmaz</small>
 		</a>
