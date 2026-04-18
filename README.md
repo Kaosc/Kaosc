@@ -3,7 +3,7 @@
   <td><img height="24" width="24" src="https://play-lh.googleusercontent.com/JHPyN4HfWxssoxcZ6LhpqI_MFThlCLQdOgeirkgb9RSTC1cvY3GmHpEPVQ5lACp2T5ujIUjqxIwMQqvHdvOVuA=w240-h480-rw" /></td><td><a href="https://play.google.com/store/apps/details?id=com.Kaosc.oneword" target="_blank"><small>One Word</small></a></td>
   <td><img height="25" width="25" src="https://play-lh.googleusercontent.com/cigk4g5HlmZdDajjMVWlHq7dbJ27t-XW2Cbmj4XObPjTkYttaw_yZUrkS_hW6hMUDQ=w240-h480-rw" /></td><td><a href="https://play.google.com/store/apps/details?id=com.Kaosc.quickcopy" target="_blank"><small>Quick Copy</small></a></td>
   <td><img height="25" width="25" src="https://play-lh.googleusercontent.com/G88arG_WBP0zgCfXsA-sZI1ouHJRirZ37kjI0WhnUgPV4KpUGhiNAQyzveTvE2Gshw=w240-h480-rw" /></td><td><a href="https://play.google.com/store/apps/details?id=com.Kaosc.SrcKitab" target="_blank"><small>Driver Book</small></a></td>
-  <td><img height="24" width="24" src="https://play-lh.googleusercontent.com/1-aC7KlD_fuL3XNc44medAk0VWa1xlvYLB2X-2DULG5qTwiuhwse6eQW7GnjPL6QyE5NUWeADjWczAuhR2shN4w=w240-h480-rw" /></td><td><a href="https://play.google.com/store/apps/details?id=com.Kaosc.museumguide" target="_blank"><small>Malatya Museum App</small></a></td>
+  <td><img height="24" width="24" src="https://play-lh.googleusercontent.com/1-aC7KlD_fuL3XNc44medAk0VWa1xlvYLB2X-2DULG5qTwiuhwse6eQW7GnjPL6QyE5NUWeADjWczAuhR2shN4w=w240-h480-rw" /></td><td><a href="https://play.google.com/store/apps/details?id=com.Kaosc.museumguide" target="_blank"><small>Museum App</small></a></td>
 </tr></table>
 
 <table><tr>
