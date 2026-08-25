@@ -9,7 +9,6 @@
 <table><tr>
   <td><img height="22" width="22" src="https://ozgekorkmaz.net/images/logo-transparent.webp" /></td><td><a href="https://ozgekorkmaz.net" target="_blank"><small>Özge Korkmaz</small></a></td>
   <td><img height="22" width="22" src="https://iremyildizinteriors.com/favicon.ico" /></td><td><a href="https://iremyildizinteriors.com" target="_blank"><small>İrem Yıldız Interiors</small></a></td>
-  <td><img height="24" width="24" src="https://fishdelicatessen.vercel.app/favicon.ico" /></td><td><a href="https://fishdelicatessen.vercel.app" target="_blank"><small>Fish Delicatessen</small></a></td>
 </tr></table>
 
 <table><tr>
