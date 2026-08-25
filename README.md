@@ -9,6 +9,7 @@
 <table><tr>
   <td><img height="22" width="22" src="https://ozgekorkmaz.net/images/logo-transparent.webp" /></td><td><a href="https://ozgekorkmaz.net" target="_blank"><small>Özge Korkmaz</small></a></td>
   <td><img height="22" width="22" src="https://iremyildizinteriors.com/favicon.ico" /></td><td><a href="https://iremyildizinteriors.com" target="_blank"><small>İrem Yıldız Interiors</small></a></td>
+  <td><img height="22" width="22" src="https://lh3.googleusercontent.com/ak-3vc_3akW-gNaXSWtzMzbEhyUiSj7DfSn93ssFyZPhGsFZZTmT6lkXe-bw9azifLUgB272tP1vBte-axssG6ELySQ=s60" /></td><td><a href="https://chromewebstore.google.com/detail/night-city/hbgdgmaingeagmgmcfjpfndeamciggbl" target="_blank"><small>Night City Theme</small></a></td>
 </tr></table>
 
 <table><tr>
@@ -16,5 +17,4 @@
   <td><img height="23" width="23" src="https://lh3.googleusercontent.com/PFta7M6CCporSkfaWGRIuW-DMk17NzNqmRnd8yK1uda220vn9S_baLgm4nLmlC3RSHkY78gUQk4pfQiivz4cDmPsWQ=s60" /></td><td><a href="https://chrome.google.com/webstore/detail/sunset-sunrise/gkfelccnlfiipepkjfmgbkaebppelfma" target="_blank"><small>Sunset Sunrise</small></a></td>
   <td><img height="22" width="22" src="https://cdn.discordapp.com/avatars/1052869011366477844/4a2eac50da241a9fb363a2fbe6bc9ff9.webp?size=256" /></td><td><a href="https://top.gg/bot/1052869011366477844?s=0832d84bff8e3" target="_blank"><small>Cat Bot</small></a></td>
   <td><img height="22" width="22" src="https://kaosc.gallerycdn.vsassets.io/extensions/kaosc/hyle/0.4.2/1747780119119/Microsoft.VisualStudio.Services.Icons.Default" /></td><td><a href="https://marketplace.visualstudio.com/items?itemName=Kaosc.hyle" target="_blank"><small>Hyle Theme</small></a></td>
-  <td><img height="22" width="22" src="https://lh3.googleusercontent.com/ak-3vc_3akW-gNaXSWtzMzbEhyUiSj7DfSn93ssFyZPhGsFZZTmT6lkXe-bw9azifLUgB272tP1vBte-axssG6ELySQ=s60" /></td><td><a href="https://chromewebstore.google.com/detail/night-city/hbgdgmaingeagmgmcfjpfndeamciggbl" target="_blank"><small>Night City Theme</small></a></td>
 </tr></table>
